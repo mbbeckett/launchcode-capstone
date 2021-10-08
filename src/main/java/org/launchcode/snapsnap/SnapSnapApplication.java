@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import javax.annotation.PostConstruct;
 
 @SpringBootApplication
-public class SnapSnapApplication {
+public class  SnapSnapApplication {
 
 	@Value("${stripe.api.key}")
 	private String stripeApiKey;
