@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<div th:replace="fragments :: page-header"></div>
+<h2>Locations</h2>
+<ul>
+    <li th:each="menu : ${menus}">
+        <a th:href="@{'/menu/view/' + ${menu.id}}" th:text="${menu.facility}"></a>
+    </li>
+</ul>
+</body>
+</html>

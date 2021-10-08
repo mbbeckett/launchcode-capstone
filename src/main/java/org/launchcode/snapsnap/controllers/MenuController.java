@@ -24,12 +24,17 @@ public class MenuController {
     @Autowired
     private ProductRepository productRepository;
 
+    @RequestMapping("index")
+    public String indexHome(Model model) {
+        model.addAttribute("menus", menuRepository.findAll());
+        return "menu/index";
+    }
+
     @GetMapping("addMenu")
     public String displayAddMenuForm(Model model) {
         model.addAttribute(new Menu());
         return "menu/addMenu";
     }
-
 
     @PostMapping("addMenu")
     public String processAddMenuForm(@ModelAttribute @Valid Menu newMenu,
