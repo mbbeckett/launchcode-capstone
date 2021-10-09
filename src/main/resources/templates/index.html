@@ -4,8 +4,20 @@
 <head th:replace="fragments :: head"></head>
 <body>
 <div th:replace="fragments :: page-header"></div>
-<div class="container">
 
+<div class="main">
+    <div class="main_container">
+        <div class="main_content">
+            <h1>ENJOY</h1>
+            <h2>NIGHTLIFE</h2>
+            <p>Start a new adventure.</p>
+            <button class="main_btn"><a th:href="@{/menu}">Get Started</a></button>
+        </div>
+        <div class="main_img--container">
+            <img th:src="@{/images/undraw-beer.svg}" alt="pic" id="main_img">
+        </div>
+    </div>
+</div>
 
 
 </div>
