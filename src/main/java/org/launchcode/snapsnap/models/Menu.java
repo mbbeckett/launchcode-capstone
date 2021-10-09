@@ -24,18 +24,20 @@ public class Menu {
     private String city;
     private String State;
     private String address;
+    private Long zipcode;
     private String serviceDescription;
 
     public Menu(){}
 
     public Menu(Integer id, String facility,
-                String city, String state, String address, String serviceDescription) {
+                String city, String state, String address, Long zipcode, String serviceDescription) {
         this.id = id;
         this.facility = facility;
         this.city = city;
         State = state;
         this.address = address;
         this.serviceDescription = serviceDescription;
+        this.zipcode = zipcode;
     }
 
     public Integer getId() {
@@ -78,6 +80,14 @@ public class Menu {
         this.address = address;
     }
 
+    public Long getZipcode() {
+        return zipcode;
+    }
+
+    public void setZipcode(Long zipcode) {
+        this.zipcode = zipcode;
+    }
+
     public String getServiceDescription() {
         return serviceDescription;
     }
@@ -92,6 +102,7 @@ public class Menu {
     public void setProducts(List<Product> products) {
         this.products = products;
     }
+
 
     @Override
     public String toString() {

@@ -6,6 +6,7 @@
 
 <nav th:replace="fragments :: page-header"></nav>
 <div class="container m-5">
+
     <h1 class="m-5">Add Menu</h1>
 
     <form method="post" style="max-width:600px;">
@@ -15,6 +16,16 @@
             <span th:errors="${menu.facility}" class="error"></span>
         </div>
         <div class="form-group">
+            <label th:for="name">Address</label>
+            <input class="form-control" th:field="${menu.address}" />
+            <span th:errors="${menu.address}" class="error"></span>
+        </div>
+        <div class="form-group">
+            <label th:for="name">Zipcode</label>
+            <input class="form-control" th:field="${menu.zipcode}" />
+            <span th:errors="${menu.zipcode}" class="error"></span>
+        </div>
+        <div class="form-group">
             <label th:for="name">City</label>
             <input class="form-control" th:field="${menu.city}" />
             <span th:errors="${menu.city}" class="error"></span>
@@ -22,12 +33,6 @@
         <div class="form-group">
             <label th:for="name">State</label>
             <input class="form-control" th:field="${menu.state}" />
-            <span th:errors="${menu.state}" class="error"></span>
-        </div>
-        <div class="form-group">
-            <label th:for="name">Address</label>
-            <input class="form-control" th:field="${menu.address}" />
-            <span th:errors="${menu.address}" class="error"></span>
         </div>
         <div class="form-group">
             <label th:for="name">Service Description</label>
