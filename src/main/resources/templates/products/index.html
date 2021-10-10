@@ -18,41 +18,43 @@
 <!--        </li>-->
 <!--    </ul>-->
 
-<!--<div class="container">-->
-<!--    <div class="job-listing" th:each="product:${products}">-->
-<!--        <img class="content-image" th:src="${product.pictureURL}" style="height:250px;width:200px;">-->
-<!--        <p th:text="${'Name: ' + product.name}"></p>-->
-<!--        <p th:text="${'Description: ' + product.description}"></p>-->
-<!--        <p th:text="${'Price: ' + product.price}"></p>-->
-<!--        <form method="post" th:action="@{/addToCart}" th:name="cart" th:object="${cart}">-->
-<!--            <input type="number" name="quantity" min="1" max="10" value="1"-->
-<!--                   class="form-control round-input form-control-sm"/>-->
-<!--            <input type="hidden" name="id" th:value="${product.id}"/>-->
-<!--            <button id="product-btn" type="submit" class="btn btn-success">Add To Cart</button>-->
-<!--        </form>-->
-<!--    </div>-->
-<!--</div>-->
-
-
-<div class="container m-3">
-        <div class="row">
-            <div class="col-md-3" th:each="product : ${products}">
-                <div class="card">
-                    <img class="card-img-top" th:src="${product.pictureURL}" alt="Card image cap">
-                    <div class="card-body text-center">
-                        <h5 class="card-title" th:text="${product.name}"></h5>
-                        <p class="card-text" th:text="${product.description}">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text" th:text="'$ ' + ${product.price}"><small class="text-muted"></small></p>
-                        <form method="post" th:action="@{/addToCart}" th:name="cart" th:object="${cart}">
-                            <input type="number" name="quantity" min="1" max="10" value="1" class="form-control mb-1 round-input form-control-sm"/>
-                            <input type="hidden" name="id" th:value="${product.id}"/>
-                            <button id="product-btn" type="submit" class="btn btn-success">Add To Cart</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="container">
+    <div class="job-listing" th:each="product:${products}">
+        <img class="content-image" th:src="${product.pictureURL}" style="height:250px;width:200px;">
+        <p th:text="${'Name: ' + product.name}"></p>
+        <p th:text="${'Description: ' + product.description}"></p>
+        <p th:text="${'Price: ' + product.price}"></p>
+        <form method="post" th:action="@{/addToCart}" th:name="cart" th:object="${cart}">
+            <input type="number" name="quantity" min="1" max="10" value="1"
+                   class="form-control round-input form-control-sm"/>
+            <input type="hidden" name="id" th:value="${product.id}"/>
+            <button id="product-btn" type="submit" class="btn btn-success">Add To Cart</button>
+        </form>
     </div>
 </div>
+
+<div th:replace="fragments :: page-footer"></div>
+
+
+<!--<div class="container m-3">-->
+<!--        <div class="row">-->
+<!--            <div class="col-sm-6" th:each="product : ${products}">-->
+<!--                <div class="card">-->
+<!--                    <img class="card-img-top" th:src="${product.pictureURL}" alt="Card image cap">-->
+<!--                    <div class="card-body text-center">-->
+<!--                        <h5 class="card-title" th:text="${product.name}"></h5>-->
+<!--                        <p class="card-text" th:text="${product.description}">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>-->
+<!--                        <p class="card-text" th:text="'$ ' + ${product.price}"><small class="text-muted"></small></p>-->
+<!--                        <form method="post" th:action="@{/addToCart}" th:name="cart" th:object="${cart}">-->
+<!--                            <input type="number" name="quantity" min="1" max="10" value="1" class="form-control mb-1 round-input form-control-sm"/>-->
+<!--                            <input type="hidden" name="id" th:value="${product.id}"/>-->
+<!--                            <button id="product-btn" type="submit" class="btn btn-success">Add To Cart</button>-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 </body>
 </html>

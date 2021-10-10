@@ -14,10 +14,28 @@
             <button class="main_btn"><a th:href="@{/menu}">Get Started</a></button>
         </div>
         <div class="main_img--container">
-            <img th:src="@{/images/undraw-beer.svg}" alt="pic" id="main_img">
+            <img th:src="@{/images/undraw-having-fun.svg}" alt="pic" id="main_img">
         </div>
     </div>
 </div>
+
+<div class="services">
+    <h1>See What We Do</h1>
+    <div class="services_container">
+        <div class="services_card">
+            <h2>Try Something New</h2>
+            <p>Begin Your Next Adventure</p>
+            <button>Browse Locations</button>
+        </div>
+        <div class="services_card">
+            <h2>Savor Every Moment</h2>
+            <p>Easily Order Old Favorites and New Experiences</p>
+            <button>Browse Selections</button>
+        </div>
+    </div>
+</div>
+
+<div th:replace="fragments :: page-footer"></div>
 
 
 </div>

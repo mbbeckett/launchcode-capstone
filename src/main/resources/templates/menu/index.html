@@ -2,12 +2,13 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head th:replace="fragments :: head"></head>
 <body>
-<div th:replace="fragments :: page-header"></div>
+<nav th:replace="fragments :: page-header"></nav>
 <h2>Locations</h2>
 <ul>
     <li th:each="menu : ${menus}">
         <a th:href="@{'/menu/view/' + ${menu.id}}" th:text="${menu.facility}"></a>
     </li>
 </ul>
+<div th:replace="fragments :: page-footer"></div>
 </body>
 </html>
