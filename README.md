@@ -1,3 +1,4 @@
+# SnapSnap - drink ordering service
 ### Overview
 Our mission is to bring a new level of convenience and flexibility to customers through mobile ordering at local bars and restuarants. It is suited for the regular patrons of local nightlife in search of new bar experiences as well as visitors looking for the most popular haunts in the neighborhood. The application lists the menus of local restaurants in the users area. This app was designed for customers who want to visit their favorite bar on a Saturday night but the bar is packed and the bartender is swamped with orders. It allows the customer to place their order and quickly return to enjoying the rest of their night without having to wait an eternity standing at the bar. A well-organized ticketing system on the bar's end allows requests to be tracked and well-managed as orders are prepared.  
 
