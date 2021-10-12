@@ -45,7 +45,7 @@ public class MenuController {
         }
 
         menuRepository.save(newMenu);
-        return "redirect:/index";
+        return "menu/index";
     }
 
 

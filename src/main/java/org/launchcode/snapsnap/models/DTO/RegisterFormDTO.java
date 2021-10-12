@@ -2,7 +2,6 @@ package org.launchcode.snapsnap.models.DTO;
 
 public class RegisterFormDTO extends LoginFormDTO{
 
-
     public static boolean enabled;
     private String verifyPassword;
 
@@ -17,7 +16,6 @@ public class RegisterFormDTO extends LoginFormDTO{
     public static boolean isEnabled() {
         return enabled;
     }
-
 
     public static void setIsEnabled(boolean isEnabled) {
         RegisterFormDTO.enabled = true;

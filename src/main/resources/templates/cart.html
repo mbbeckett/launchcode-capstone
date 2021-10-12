@@ -7,7 +7,7 @@
 <div th:replace="fragments :: page-header"></div>
 <div class="container">
     <h1>Review Order</h1>
-    <table class="job-listing">
+    <table class="mx-3 table table-striped">
         <thead>
             <tr>
                 <th scope="col">PRODUCT</th>
@@ -47,11 +47,12 @@
 <!--    <td class="text-center"><form th:action="@{/menu/view/{menuId}}" method="get">-->
 <!--        <button type="button" class="btn btn-primary btn-lg btn-block">-->
 <!--            Return To Menu</button></form></td>-->
-        <div class="d-flex p-2 text-center justify-content-center shadow-sm">
+        <div class="d-flex p-2 text-center justify-content-center shadow-sm m-3">
             <h2>Subtotal: <span class="text-md" th:text="'$ ' + ${cart.totalCost}"></span></h2>
             <a th:href="@{/checkout}"><button type="button" class="btn btn-primary btn-lg btn-block">Checkout</button></a>
         </div>
     </div>
+
 <div th:replace="fragments :: page-footer"></div>
 
 </body>
