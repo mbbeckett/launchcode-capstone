@@ -1,4 +1,4 @@
-package org.launchcode.javawebdevtechjobspersistent;
+package org.launchcode.snapsnap;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
